@@ -51,7 +51,8 @@ function get_param($ParamName)
   else if(isset($HTTP_GET_VARS[$ParamName]))
     $ParamValue = $HTTP_GET_VARS[$ParamName];
 
-  return $ParamValue;
+  return htmlentities($ParamValue, ENT_QUOTES);
+//  return $ParamValue;
 }
 
 function get_session($ParamName)
