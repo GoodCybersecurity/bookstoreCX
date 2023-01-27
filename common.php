@@ -45,12 +45,6 @@ function get_param($ParamName)
   global $HTTP_POST_VARS;
   global $HTTP_GET_VARS;
 
-  $ParamValue = "";
-  if(isset($HTTP_POST_VARS[$ParamName]))
-    $ParamValue = $HTTP_POST_VARS[$ParamName];
-  else if(isset($HTTP_GET_VARS[$ParamName]))
-    $ParamValue = $HTTP_GET_VARS[$ParamName];
-
 //  return htmlentities($ParamValue, ENT_QUOTES);
   return $ParamValue;
 }
