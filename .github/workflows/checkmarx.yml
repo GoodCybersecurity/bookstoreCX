@@ -16,8 +16,8 @@ jobs:
       - name: bako-nfr
         uses: checkmarx/ast-github-action@main
         with:
-          base_uri: ${{ secrets.AST_RND_SCANS_BASE_URI }}
-          cx_tenant: ${{ secrets.AST_RND_SCANS_TENANT }}
-          cx_client_id: ${{ secrets.AST_RND_SCANS_CLIENT_ID }}
-          cx_client_secret: ${{ secrets.AST_RND_SCANS_CLIENT_SECRET }}
+          base_uri: https://eu.ast.checkmarx.net
+          cx_tenant: bako-nfr
+          cx_client_id: GitHub_client
+          cx_client_secret: SMwtkCPntMIADDNJma0JPOlgnI2RCYab
           additional_params: --tags galactica-team --threshold "sast-high=1"
