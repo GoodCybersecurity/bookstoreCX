@@ -12,7 +12,7 @@
     # Secret key for AST portal authentication
     cx_client_secret: ${{ secrets.CLIENT_SECRET }}
     # Select a Checkmarx Project Name
-    project_name: GoodCybersecurity/bookstore
+    project_name: # optional, default is ${{ github.repository }}
     # Branch name
     branch: # optional, default is ${{ github.head_ref || github.ref }}
     # GitHub API Token
