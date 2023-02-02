@@ -1,14 +1,23 @@
-- name: Checkmarx AST Github Action
-  uses: Checkmarx/ast-github-action@2.0.14
-  with:
-    base_uri: https://eu.ast.checkmarx.net
-    cx_tenant: bako-nfr
-    cx_client_id: ${{ secrets.CLIENT_ID }}
-    cx_client_secret: ${{ secrets.CLIENT_SECRET }}
-    project_name: # optional, default is ${{ github.repository }}
-    branch: # optional, default is ${{ github.head_ref || github.ref }}
-    github_token: # optional, default is ${{ github.token }}
-    additional_params: # optional, default is 
-    repo_name: # optional, default is ${{ github.event.repository.name }}
-    namespace: # optional, default is ${{ github.repository_owner }}
-    pr_number: # optional, default is ${{ github.event.number }}
+name: Checkmarx One Scan
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  cx-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Checkmarx One CLI Action
+        uses: checkmarx/ast-github-action@main
+        with:
+          base_uri: ${{ secrets.AST_RND_SCANS_BASE_URI }}
+          cx_tenant: ${{ secrets.AST_RND_SCANS_TENANT }}
+          cx_client_id: ${{ secrets.AST_RND_SCANS_CLIENT_ID }}
+          cx_client_secret: ${{ secrets.AST_RND_SCANS_CLIENT_SECRET }}
+          additional_params: --tags galactica-team --threshold "sast-high=1"
