@@ -17,5 +17,5 @@ jobs:
           project_name: ${{ github.repository }}
           cx_tenant: bako-nfr
           base_uri: https://eu.ast.checkmarx.net
-          cx_client_id: ${{ secrets.CLIENT_ID }}
-          cx_client_secret: ${{ secrets.SECRET }}
+          cx_client_id: GitHub_client
+          cx_client_secret: iqvZnvPNsEpyyKderMV7zfdsF4xki79M
