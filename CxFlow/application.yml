@@ -24,7 +24,7 @@ checkmarx:
   username: eduard.pliushch
   password: Eduard2003godd$
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
-  base-url: http://localhost:8088/
+  base-url: https://eu.ast.checkmarx.net/
   team: \CxServer\SP\Company
   url: ${checkmarx.base-url}/cxrestapi
   #WSDL Config
