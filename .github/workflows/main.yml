@@ -1,22 +1,22 @@
 
-name: Checkmarx One Scan
+name: Publish CxFlow GitHub Action
+
+# Run this workflow on Tags matching v* pattern and publish a new release
 on:
   push:
-    branches:
-      - main
-      - master
-      - dev
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Checkmarx One CLI Action
-        uses: checkmarx/ast-github-action@main #Github Action version
-        with:
-          project_name: ${{ github.repository }}
-          cx_tenant: bako-nfr
-          base_uri: https://eu.ast.checkmarx.net
-          cx_client_id: ${{ secrets.CLIENT_ID }}
-          cx_client_secret: ${{ secrets.SECRET }}
+    - uses: actions/checkout@v2
+    - name: Create a Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
