@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ccfe7ed-9ea4-4f8f-a985-3c3d7c1d5f14" name="Default" comment="CxFlowMasterPush-Test1" />
+    <list default="true" id="0ccfe7ed-9ea4-4f8f-a985-3c3d7c1d5f14" name="Default" comment="CxFlowMasterPush-Test1fd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +129,7 @@
       <workItem from="1595316279134" duration="488000" />
       <workItem from="1595317264336" duration="472000" />
       <workItem from="1675781065276" duration="304000" />
-      <workItem from="1675843634788" duration="548000" />
+      <workItem from="1675843634788" duration="720000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1675781191184</created>
@@ -156,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675843728156</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CxFlowMasterPush-Test1fd">
+      <created>1675844215711</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675844215711</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -203,7 +213,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="CxFlowMasterPush-Test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="CxFlowMasterPush-Test1" />
+    <MESSAGE value="CxFlowMasterPush-Test1fd" />
+    <option name="LAST_COMMIT_MESSAGE" value="CxFlowMasterPush-Test1fd" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/common.php">
