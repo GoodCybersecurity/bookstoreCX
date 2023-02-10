@@ -31,8 +31,8 @@ jobs:
       with:
         checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
         team: /CxServer/SP/Company
-        checkmarx_username: ${{ secrets.CHECKMARX_USER }}
-        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
-        checkmarx_client_secret: ${{ secrets.SECRET }} # To be stored in GitHub Secrets.
-        project: ${{ secrets.CHECKMARX_PROJECT }} # <-- Insert Checkmarx SAST Project Name
-        github_token: ${{ secrets.TOKEN }}
+        project_name: ${{ github.repository }}
+        cx_tenant: bako-nfr
+        base_uri: https://eu.ast.checkmarx.net
+        cx_client_id: ${{ secrets.CLIENT_ID }}
+        cx_client_secret: ${{ secrets.SECRET }}
