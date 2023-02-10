@@ -31,7 +31,7 @@ jobs:
       with:
         checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
         team: /CxServer/SP/Company
-        project_name: GoodCybersecurity/bookstore
+        project: ${{ secrets.CHECKMARX_PROJECT }}
         cx_tenant: bako-nfr
         base_uri: https://eu.ast.checkmarx.net
         cx_client_id: ${{ secrets.CLIENT_ID }}
