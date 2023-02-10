@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ccfe7ed-9ea4-4f8f-a985-3c3d7c1d5f14" name="Default" comment="CxFlowMasterPush-Test1fd" />
+    <list default="true" id="0ccfe7ed-9ea4-4f8f-a985-3c3d7c1d5f14" name="Default" comment="CxFlowMasterPush-Test1fd">
+      <change afterPath="$PROJECT_DIR$/reamee.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,6 +132,7 @@
       <workItem from="1595317264336" duration="472000" />
       <workItem from="1675781065276" duration="304000" />
       <workItem from="1675843634788" duration="720000" />
+      <workItem from="1676030440165" duration="97000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1675781191184</created>
