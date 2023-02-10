@@ -30,9 +30,8 @@ jobs:
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
         checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
-        team: /CxServer/SP/Company
         project: ${{ secrets.CHECKMARX_PROJECT }}
         cx_tenant: bako-nfr
-        API_token: ${{ secrets.API }}
+        checkmarx_api: ${{ secrets.API }}
         cx_client_id: ${{ secrets.CLIENT_ID }}
         cx_client_secret: ${{ secrets.SECRET }}
