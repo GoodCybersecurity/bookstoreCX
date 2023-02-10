@@ -29,10 +29,9 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
-        checkmarx_url: ${{ secrets.CHECKMARX_URL }} # <-- Insert Checkmarx SAST Project Name
+        project_name: ${{ github/repository }} # <-- Insert Checkmarx SAST Project Name
         team: /CxServer/SP/Company
-        checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
-        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
+        cx_tenant: ${{ secrets.TENANT }}
+        base_uri: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
+        cx_client_id: ${{ secrets.CLIENT_ID }} # To be stored in GitHub Secrets.
         checkmarx_client_secret: ${{ secrets.SECRET }} # To be stored in GitHub Secrets.
-        project: ${{ secrets.CHECKMARX_PROJECT }}
-        app: SampleApp
