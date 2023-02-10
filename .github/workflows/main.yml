@@ -31,6 +31,8 @@ jobs:
       with:
         checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
         project: ${{ secrets.CHECKMARX_PROJECT }}
+        checkmarx_username: ${{ secrets.CHECKMARX_USER }}
+        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
         cx_tenant: bako-nfr
         checkmarx_api: ${{ secrets.API }}
         cx_client_id: ${{ secrets.CLIENT_ID }}
