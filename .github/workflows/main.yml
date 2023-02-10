@@ -13,7 +13,7 @@
 #
 # For full documentation, including a list of all inputs, please refer to the README https://github.com/checkmarx-ts/checkmarx-cxflow-github-action
 
-name: Checkmarx SAST Scan
+name: Checkmarx CxFlow Action
 on:
   push:
     branches:
@@ -27,16 +27,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 #Github Action version
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
-        project: ${{ secrets.CHECKMARX_PROJECT }} # <-- Insert Checkmarx SAST Project Name
+        checkmarx_url: ${{ secrets.CHECKMARX_URL }} # <-- Insert Checkmarx SAST Project Name
         team: /CxServer/SP/Company
-        checkmarx_url: ${{ secrets.CHECKMARX_URL }} # To be stored in GitHub Secrets.
         checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
         checkmarx_client_secret: ${{ secrets.SECRET }} # To be stored in GitHub Secrets.
-        checkmarx_client-id: ${{ secrets.CLIENT_ID }}
-        checkmarx_tenant: ${{ secrets.TENANT }}
-        scanners: sast, sca
-        bug_tracker: Sarif
-        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true
+        project: ${{ secrets.CHECKMARX_PROJECT }}
+        app: SampleApp
