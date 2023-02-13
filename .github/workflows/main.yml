@@ -15,7 +15,7 @@ jobs:
       - name: Checkmarx One CLI Action
         uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5
         with:
-          project_name: ${{ github.repository }}
+          project: ${{ secrets.CHECKMARX_PROJECT }}
           cx_tenant: bako-nfr
           base_uri: https://eu.ast.checkmarx.net
           cx_client_id: ${{ secrets.CLIENT_ID }}
