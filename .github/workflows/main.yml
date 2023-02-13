@@ -27,13 +27,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
+      uses: fjsnogueira/checkmarx-cxflow-github-action@v1.1-alpha #Github Action version
       with:
-        cxgo_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
+        checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
+        team: /CxServer/SP/Company
         project: ${{ secrets.CHECKMARX_PROJECT }}
-        cxgo_username: ${{ secrets.CHECKMARX_USER }}
-        cxgo_password: ${{ secrets.CHECKMARX_PASSWORD }}
-        cxgo_tenant: bako-nfr
+        checkmarx_username: ${{ secrets.CHECKMARX_USER }}
+        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
+        sca_tenant: bako-nfr
         checkmarx_api: ${{ secrets.API }}
         cxgo_client_id: ${{ secrets.CLIENT_ID }}
-        cxgo_client_secret: ${{ secrets.SECRET }}
+        checkmarx_client_secret: ${{ secrets.SECRET }}
+        github_token: ${{ github.token }}
