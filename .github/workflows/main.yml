@@ -36,6 +36,7 @@ jobs:
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets
         checkmarx_client_secret: ${{ secrets.SECRET }} # To be stored in GitHub Secrets.
         checkmarx_client_id: ${{ secrets.CLIENT_ID }} # To be stored in GitHub Secrets
+        github_token: ${{ secrets.TOKEN }}
         break_build: false
         scanners: sast
         bug_tracker: Sarif
