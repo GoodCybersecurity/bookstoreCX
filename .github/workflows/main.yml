@@ -38,6 +38,6 @@ jobs:
         checkmarx_client_id: ${{ secrets.CLIENT_ID }} # To be stored in GitHub Secrets
         break_build: false
         scanners: sast
-        bug_tracker: Sarif
+        bug_tracker: github
         params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filterSeverity --cx-flow.filterCategory  --checkmarx.disable-clubbing=true
     
