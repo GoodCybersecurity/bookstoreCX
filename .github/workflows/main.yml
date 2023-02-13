@@ -16,7 +16,9 @@ jobs:
         uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5
         with:
           project: ${{ secrets.CHECKMARX_PROJECT }}
-          cx_tenant: bako-nfr
+          checkmarx_tenant: ${{ secrets.TENANT }}
+          checkmarx_username: ${{ secrets.CHECKMARX_USER }}
+          checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
           base_uri: https://eu.ast.checkmarx.net
-          cx_client_id: ${{ secrets.CLIENT_ID }}
-          cx_client_secret: ${{ secrets.SECRET }}
+          checkmarxx_client_id: ${{ secrets.CLIENT_ID }}
+          checkmarxx_client_secret: ${{ secrets.SECRET }}
