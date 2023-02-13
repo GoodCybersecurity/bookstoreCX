@@ -27,7 +27,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4 #Github Action version
+      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
         project: ${{ secrets.CHECKMARX_PROJECT }} # <-- Insert Checkmarx SAST Project Name
         team: ${{ secrets.CHECKMARX_TEAMS }}
@@ -35,6 +35,7 @@ jobs:
         checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
         checkmarx_client_secret: ${{ secrets.SECRET }} # To be stored in GitHub Secrets.
+        checkmarx_client_id: ${{ secrets.CLIENT_ID }} # To be stored in GitHub Secrets.
         break_build: false
         scanners: sast
         bug_tracker: Sarif
