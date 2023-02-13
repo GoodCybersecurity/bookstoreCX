@@ -29,11 +29,11 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5 #Github Action version
       with:
-        checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
+        cxgo_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
         project: ${{ secrets.CHECKMARX_PROJECT }}
-        checkmarx_username: ${{ secrets.CHECKMARX_USER }}
-        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
-        cx_tenant: bako-nfr
+        cxgo_username: ${{ secrets.CHECKMARX_USER }}
+        cxgo_password: ${{ secrets.CHECKMARX_PASSWORD }}
+        cxgo_tenant: bako-nfr
         checkmarx_api: ${{ secrets.API }}
-        cx_client_id: ${{ secrets.CLIENT_ID }}
-        cx_client_secret: ${{ secrets.SECRET }}
+        cxgo_client_id: ${{ secrets.CLIENT_ID }}
+        cxgo_client_secret: ${{ secrets.SECRET }}
