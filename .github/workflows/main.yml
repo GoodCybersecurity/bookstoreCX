@@ -1,17 +1,3 @@
-# This workflow is to automate Checkmarx SAST scans.  It runs on a push to the main branch.
-#
-# The following GitHub Secrets must be first defined:
-#   - CHECKMARX_URL
-#   - CHECKMARX_USER
-#   - CHECKMARX_PASSWORD
-#   - CHECKMARX_CLIENT_SECRET
-#
-# The following variables must be inserted below:
-#   - <ProjectName>
-#
-# Update the 'team' field to reflect the team name used in Checkmarx.
-#
-# For full documentation, including a list of all inputs, please refer to the README https://github.com/checkmarx-ts/checkmarx-cxflow-github-action
 
 name: Checkmarx CxFlow Action
 on:
@@ -19,23 +5,18 @@ on:
     branches:
       - main
       - master
-    
+      - dev
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Checkmarx CxFlow Action
-      uses: fjsnogueira/checkmarx-cxflow-github-action@v1.1-alpha #Github Action version
-      with:
-        checkmarx_url: https://eu.ast.checkmarx.net # To be stored in GitHub Secrets.
-        team: /CxServer/SP/Company
-        project: ${{ secrets.CHECKMARX_PROJECT }}
-        checkmarx_username: ${{ secrets.CHECKMARX_USER }}
-        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
-        sca_tenant: bako-nfr
-        checkmarx_api: ${{ secrets.API }}
-        cxgo_client_id: ${{ secrets.CLIENT_ID }}
-        checkmarx_client_secret: ${{ secrets.SECRET }}
-        github_token: ${{ github.token }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkmarx One CLI Action
+        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.5
+        with:
+          project_name: ${{ github.repository }}
+          cx_tenant: bako-nfr
+          base_uri: https://eu.ast.checkmarx.net
+          cx_client_id: ${{ secrets.CLIENT_ID }}
+          cx_client_secret: ${{ secrets.SECRET }}
