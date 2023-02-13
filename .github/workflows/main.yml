@@ -31,7 +31,7 @@ jobs:
       with:
         project: ${{ secrets.CHECKMARX_PROJECT }} 
         checkmarx_url: ${{ secrets.CHECKMARX_URL }} # To be stored in GitHub Secrets.
-        team: CxServer/SP/Сompany
+        team: CxServer
         checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets
         checkmarx_client_secret: ${{ secrets.SECRET }} # To be stored in GitHub Secrets.
